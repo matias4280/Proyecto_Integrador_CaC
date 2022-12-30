@@ -1,0 +1,26 @@
+.tickets{
+    width: 1000px;
+    margin: 50px auto;
+    padding: 50px;
+}
+
+.tickets li{
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border-style: solid;
+    border-color: black;
+
+    border-width: 2px;
+    border-radius: 10px;
+    
+}
+
+.tickets li:hover{
+    border-color:yellow
+}
+

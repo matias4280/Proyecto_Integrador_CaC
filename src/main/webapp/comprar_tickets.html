@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel = "stylesheet" type="text/css" href="style_extra.css">
+    
+    <title>Venta de tickets</title>
+</head>
+    <body>
+       
+        <header>
+            <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #454647">
+                <div class="container">
+                  <a class="navbar-brand" href="index.html">
+                    Conf Bs As
+                  </a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse flex-row-reverse" id="navbarNav">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">La Conferencia</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Los Oradores</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">El Lugar y La Fecha</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Conviértete en Orador</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link " style="color:green ; font-weight: 700;" href="comprar_tickets.html">Comprar Tickets</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+        </header>
+        <main>
+            <div>
+                <ul class="tickets">
+                    <li>
+                        <h2>Estudiante</h2>
+                        <p class="">Tiene un descuento</p>
+                        <p class="">80%</p>
+                        <p class="">Presentar documentacion</p>
+                    </li>
+                    <li>
+                        <h2>Trainee</h2>
+                        
+                        <p class="">Tiene un descuento</p>
+                        <p class="">50%</p>
+                        <p class="">Presentar documentacion</p>
+                        
+                    </li>
+                    <li>
+                        <h2>Junior</h2>
+                      
+                        <p class="">Tiene un descuento</p>
+                        <p class="">15%</p>
+                        <p class="">Presentar documentacion</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div style="text-align: center">
+                <span>VENTA</span>
+                <h1>VALOR DE TICKET $<span id="precio">200</span></h1>
+              </div>
+            <div class="container" style="margin-bottom: 170px">
+              <form action="compraTicket.jsp">
+                <div class="row mb-3">
+                  <div class="col-sm-6">
+                    <input class="form-control" type="text" name="nombre" id="nombre" placeholder="Nombre">
+                  </div>
+                  <div class="col-sm-6">
+                    <input class="form-control" type="text" name="apellido" id="apellido" placeholder="Apellido">
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col">
+                    <input class="form-control" type="text" name="mail" id="mail" placeholder="correo">
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-sm-6">
+                    <label for="cantidad">Cantidad</label>
+                    <input class="form-control" type="number" name="cantidad" id="cantidad" placeholder="cantidad">
+                  </div>
+                  <div class="col-sm-6">
+                    <label for="categoria">Categoria</label>
+                    <select class="form-select" name="categoria" id="categoria">
+                      <option value="80">Estudiante</option>
+                      <option value="50">Trainee</option>
+                      <option value="15">Junior</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col">
+                    <div class="alert alert-primary" role="alert">
+                      Total a pagar: $ <span id="precioPagar">0</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="d-grid col-sm-6 mx-auto">
+                    <button type="button" class="btn btn-success" id="borrar" onclick="resumen">
+                      Borrar
+                    </button>
+                  </div>
+                  <div class="d-grid col-sm-6 mx-auto">
+                    <button type="submit" class="btn btn-success" id="resumen">
+                      Resumen
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            
+
+
+        </main>
+
+        <footer>
+            <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #454647">
+              <div class="container">
+                <ul class="navbar-nav" style="justify-content: space-between; width: 100%">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Preguntas Frecuentes</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contáctanos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Prensa</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Conferencias</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Términos y Condiciones</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Privacidad</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Estudiantes</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </footer>
+        <script>
+            //paso a entero el valor de precio que es 200, precio fijo
+                let precio = parseInt(document.getElementById("precio").innerText);
+                //me "guardo" el boton
+                let btnBorrar = document.getElementById("borrar");
+                let btnResumen = document.getElementById("resumen");
+            //funcion que calcula el precio total 
+                function resumen(precio, cantidad, categoria) {
+                    let total = precio * cantidad;
+                    let descuento = (total * categoria) / 100;
+                    return total - descuento;
+                }
+                    //evento cuando hago clic en el boton resumen
+                    //reune los datos de los diferentes campos y llama a la funcion resumen
+                btnResumen.addEventListener("click", () => {
+                    let cantidad = parseInt(document.getElementById("cantidad").value);
+                    let categoria = parseInt(document.getElementById("categoria").value);
+                    document.getElementById("precioPagar").innerText = resumen(
+                        precio,
+                        cantidad,
+                        categoria
+                    );
+                });
+                //evento cuando hago clic en el boton borrar
+                btnBorrar.addEventListener("click", () => {
+                    document.getElementById("cantidad").value = 0;
+                    document.getElementById("precioPagar").innerText = 0;
+                });
+            
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+</html>
